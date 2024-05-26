@@ -1,0 +1,40 @@
+{
+    "name": "TouchControl",
+    "maps": [
+        {
+            "name": "CarControll",
+            "id": "a9b97392-52d2-4d14-8cd0-828d112e9a1c",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Button",
+                    "id": "294299cf-e4ec-473e-803b-53e93ced3251",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "2d375c21-0d7e-4c99-9800-71728001868f",
+                    "path": "<Touchscreen>/primaryTouch/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "TouchControl",
+            "bindingGroup": "TouchControl",
+            "devices": []
+        }
+    ]
+}
