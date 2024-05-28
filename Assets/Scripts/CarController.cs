@@ -1,14 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public enum ControlerMode {
-    Keyboard = 1, Touch = 2
-}
+
 
 public class CarController : MonoBehaviour {
-    public ControlerMode controlerMode;
+
 
     public float speed = 1500f;
     public float rotationSpeed = 4f;
@@ -20,9 +19,14 @@ public class CarController : MonoBehaviour {
 
     public Rigidbody2D car;
 
-    public GameObject map;
+    public MoveCarActions moveCarAction;
 
-    public GameObject UI;
+    private void Awake() {
+        moveCarAction = new MoveCarActions();
+        moveCarAction.Enable();
+        moveCarAction.Player.MoveCar.performed += MoveCar;
+        moveCarAction.Player.MoveCar.canceled += MoveCar;
+    }
 
     private void FixedUpdate() {
         if (movement == 0f) {
@@ -50,11 +54,5 @@ public class CarController : MonoBehaviour {
         rotation = value;
     }
 
-    // public void RotateCarLeft(float rotaion) {
-    //     Debug.Log("Rotate Car Left");
-    // }
 
-    // public void RotateCarRight(float rotaion) {
-    //     Debug.Log("Rotate Car Right");
-    // }
 }

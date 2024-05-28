@@ -7,12 +7,12 @@
             "actions": [
                 {
                     "name": "MoveCar",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "0f15d160-3b89-48c6-bdb5-45b4183a9bf8",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
+                    "interactions": "Press",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
